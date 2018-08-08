@@ -1,12 +1,9 @@
 var btn = document.getElementById('test');
-var template = `
-<div class="ico"><i class="fas fa-check"></i></div>
-<div class="msg">Myfirst</div>
-`;
+
 btn.addEventListener('click', () => {
     console.log('123');
-    var notify =  document.querySelector('.notify').innerHTML = template;
+    document.querySelector('.notify').classList.add('toggle');
     setTimeout(() => {
-        document.querySelector('.notify').innerHTML = '';
+        document.querySelector('.notify').classList.remove('toggle');
     }, 2000);
 });
